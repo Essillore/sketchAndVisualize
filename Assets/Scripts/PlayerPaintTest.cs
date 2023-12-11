@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPaint : MonoBehaviour
+public class PlayerPaintTest : MonoBehaviour
 {
-    public GameObject platformPrefab; // Drag your platform prefab here
+    public GameObject platformPrefab; // Drag your platform prefab here in the Unity Editor
 
     private bool isCreatingPlatform;
     private Vector2 platformStartPosition;
@@ -28,7 +28,7 @@ public class PlayerPaint : MonoBehaviour
 
         if (isCreatingPlatform)
         {
-            UpdatePlatformSize();
+            UpdatePlatformSizeAndPosition();
         }
     }
 
@@ -44,7 +44,7 @@ public class PlayerPaint : MonoBehaviour
         isCreatingPlatform = false;
     }
 
-    void UpdatePlatformSize()
+    void UpdatePlatformSizeAndPosition()
     {
         if (currentPlatform != null)
         {
@@ -52,6 +52,10 @@ public class PlayerPaint : MonoBehaviour
             float platformWidth = Mathf.Abs(currentMousePosition.x - platformStartPosition.x);
             float platformHeight = Mathf.Abs(currentMousePosition.y - platformStartPosition.y);
 
+            float platformX = (currentMousePosition.x + platformStartPosition.x) / 2f;
+            float platformY = (currentMousePosition.y + platformStartPosition.y) / 2f;
+
+            currentPlatform.transform.position = new Vector3(platformX, platformY, 0f);
             currentPlatform.transform.localScale = new Vector3(platformWidth, platformHeight, 1f);
         }
     }
