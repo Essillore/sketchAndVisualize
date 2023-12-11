@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.ConstrainedExecution;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI.Table;
@@ -19,7 +18,7 @@ public class PlayerControllerScript : MonoBehaviour
     public bool facingRight = true;
     private bool moving = false;
 
-    public float airControlFactor = 0.5f;
+
     public GameObject playerSpriteObject;
 
     [Header("Grounded")]
@@ -40,6 +39,7 @@ public class PlayerControllerScript : MonoBehaviour
     public float coyoteTimeTimer;
     public float jumpBuffer = 0.3f;
     public float jumpBufferTimer;
+    public float airControlFactor = 0.5f;
 
 
 
@@ -125,9 +125,6 @@ public void Flip()
                 facingRight = true;
             }
     }
-
-
-
 
     public void Jump()
     {
