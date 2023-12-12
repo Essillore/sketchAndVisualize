@@ -84,7 +84,7 @@ public class PaintTest3 : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
-        if (hit.collider != null)
+        if (hit.collider != null && hit.collider.CompareTag("PaintedIce"))
         {
             Destroy(hit.collider.gameObject);
         }
