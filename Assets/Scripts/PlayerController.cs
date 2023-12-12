@@ -61,11 +61,8 @@ public class PlayerControllerScript : MonoBehaviour
 
     public void Update()
     {
-        //
-        if (jumpBufferTimer > 0f && coyoteTimeTimer > 0f)
-        {
-            Jump();
-        }
+        Jump();
+
     }
 
     public void Move()
@@ -81,11 +78,6 @@ public class PlayerControllerScript : MonoBehaviour
                 myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, 0f, deceleration * Time.deltaTime), myRB.velocity.y);
           //  transform.Translate(movement);
             
-        }
-        else
-        {
-            // Apply air control (optional)
-          //  transform.Translate(movement * 0.5f, Space.Self);
         }
  
         //swap facing direction
@@ -141,27 +133,36 @@ public void Flip()
     public void Jump()
     {
         Debug.Log("Jumped");
-   //            myRB.AddForce(Vector2.up * jumpForce);
+
 
         if (Input.GetButtonDown("Jump"))
         {
-            myRB.velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
             jumpBufferTimer = jumpBuffer;
-        }
-
-        if (Input.GetButtonUp("Jump") && myRB.velocity.y > 0f)
-        {
-           myRB.velocity = new Vector2(myRB.velocity.x, myRB.velocity.y * 0.6f);
-           coyoteTimeTimer = 0f;
         }
         else
         {
             jumpBufferTimer -= Time.deltaTime;
         }
-    }
- 
 
-    public void OnCollisionEnter2D(Collision2D collision)
+        if (jumpBufferTimer > 0f && coyoteTimeTimer > 0f)
+        {
+            myRB.velocity = new Vector2(myRB.velocity.x, jumpForce);
+
+            jumpBufferTimer = 0f;
+        }
+
+        if (Input.GetButtonUp("Jump") && myRB.velocity.y > 0f)
+        {
+            myRB.velocity = new Vector2(myRB.velocity.x, myRB.velocity.y * 0.6f);
+            coyoteTimeTimer = 0f;
+        }
+
+        jumpBufferTimer = Mathf.Clamp(jumpBufferTimer, 0f, jumpBuffer);
+
+    }
+
+
+        public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
