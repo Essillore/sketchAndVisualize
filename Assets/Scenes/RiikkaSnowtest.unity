@@ -448,12 +448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc2bfd78d1e6b74bb13e19cdfbeb980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  acceleration: 2
-  deceleration: 1
+  speed: 20
+  acceleration: 60
+  deceleration: 10
   horizontal: 0
   vertical: 0
-  jumpForce: 10
+  jumpForce: 8
   maxYVelocity: 0
   myRB: {fileID: 994674540}
   facingRight: 1
@@ -470,7 +470,7 @@ MonoBehaviour:
   coyoteTime: 0.3
   coyoteTimeTimer: 0
   jumpBuffer: 0.3
-  jumpBufferTimer: 0
+  jumpBufferTimer: 1
   airControlFactor: 0.5
 --- !u!4 &994674538
 Transform:
@@ -502,7 +502,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

@@ -49,22 +49,28 @@ public class PlayerControllerScript : MonoBehaviour
         transform.position = playerSpawn.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
 
         Move();
 
-        if (Input.GetButtonDown("Jump"))
+        
+    }
+
+    public void Update()
+    {
+        //
+        if (jumpBufferTimer > 0f && coyoteTimeTimer > 0f)
         {
             Jump();
-            jumpBufferTimer = 0f;
         }
     }
+
     public void Move()
     {
-        Vector3 movement = new Vector3(horizontal, 0.0f, vertical).normalized * speed * Time.deltaTime;
+       // Vector3 movement = new Vector3(horizontal, 0.0f, vertical).normalized * speed * Time.deltaTime;
 
         if (IsGrounded())
         {
@@ -73,13 +79,13 @@ public class PlayerControllerScript : MonoBehaviour
 
             if (horizontal == 0 && myRB.velocity.x != 0)
                 myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, 0f, deceleration * Time.deltaTime), myRB.velocity.y);
-            transform.Translate(movement);
+          //  transform.Translate(movement);
             
         }
         else
         {
             // Apply air control (optional)
-            transform.Translate(movement * 0.5f, Space.Self);
+          //  transform.Translate(movement * 0.5f, Space.Self);
         }
  
         //swap facing direction
@@ -96,6 +102,7 @@ public class PlayerControllerScript : MonoBehaviour
         {
     //        camControl.DeadZoneOff();
             coyoteTimeTimer = coyoteTime;
+            jumpBuffer = 0.3f;
         }
 
         else
@@ -134,8 +141,23 @@ public void Flip()
     public void Jump()
     {
         Debug.Log("Jumped");
-        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
+   //            myRB.AddForce(Vector2.up * jumpForce);
 
+        if (Input.GetButtonDown("Jump"))
+        {
+            myRB.velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
+            jumpBufferTimer = jumpBuffer;
+        }
+
+        if (Input.GetButtonUp("Jump") && myRB.velocity.y > 0f)
+        {
+           myRB.velocity = new Vector2(myRB.velocity.x, myRB.velocity.y * 0.6f);
+           coyoteTimeTimer = 0f;
+        }
+        else
+        {
+            jumpBufferTimer -= Time.deltaTime;
+        }
     }
  
 
