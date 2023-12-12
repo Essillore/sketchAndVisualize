@@ -10,6 +10,8 @@ public class PlayerControllerScript : MonoBehaviour
     [Header("Stats")]
     //public CameraController camControl;
     public float speed = 6f;
+    public float acceleration = 8f;
+    public float deceleration = 1f;
     public float horizontal;
     public float vertical;
     public float jumpForce = 20f;
@@ -41,8 +43,6 @@ public class PlayerControllerScript : MonoBehaviour
     public float jumpBufferTimer;
     public float airControlFactor = 0.5f;
 
-
-
     void Start()
     {
      //   camControl = GameObject.Find("CameraController").GetComponent<CameraController>();
@@ -68,6 +68,11 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (IsGrounded())
         {
+            if (horizontal != 0)
+                myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, horizontal * speed, acceleration * Time.deltaTime), myRB.velocity.y);
+
+            if (horizontal == 0 && myRB.velocity.x != 0)
+                myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, 0f, deceleration * Time.deltaTime), myRB.velocity.y);
             transform.Translate(movement);
             
         }
