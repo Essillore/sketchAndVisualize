@@ -56,11 +56,24 @@ public class PlayerPaint : MonoBehaviour
     {
         if (currentPlatform != null)
         {
-            Vector2 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //test1
+            /*Vector2 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float platformWidth = Mathf.Clamp(Mathf.Abs(currentMousePosition.x - platformStartPosition.x), 0f, maxPlatformWidth);
             float platformHeight = initialPlatformHeight; //keep the height constant and modify in the inspector
 
-            currentPlatform.transform.localScale = new Vector3(platformWidth, platformHeight, 1f);
+            currentPlatform.transform.localScale = new Vector3(platformWidth, platformHeight, 1f);*/
+
+            //working
+            Vector2 currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            float platformWidth = Mathf.Clamp(Mathf.Abs(currentMousePosition.x - platformStartPosition.x), 0f, maxPlatformWidth);
+
+            // Determine the direction of mouse movement
+            float direction = currentMousePosition.x > platformStartPosition.x ? 1 : -1;
+
+            // Set the new position and scale of the platform
+            currentPlatform.transform.position = new Vector3(platformStartPosition.x + (platformWidth / 2 * direction), platformStartPosition.y, initialPlatformHeight);
+            currentPlatform.transform.localScale = new Vector3(platformWidth, initialPlatformHeight, 1f);
+
         }
     }
 
