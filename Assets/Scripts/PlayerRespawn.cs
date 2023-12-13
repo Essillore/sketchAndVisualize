@@ -7,6 +7,8 @@ public class PlayerRespawn : MonoBehaviour
     private GameObject player;
     private Checkpoint lastCheckpoint;
 
+    Vector2 startPos;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -15,6 +17,8 @@ public class PlayerRespawn : MonoBehaviour
         {
             Debug.LogError("Player not found! Make sure the player has the 'Player' tag.");
         }
+
+        startPos = transform.position;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -49,7 +53,7 @@ public class PlayerRespawn : MonoBehaviour
         {
             Debug.LogWarning("No checkpoint set. Respawning at the initial spawn point.");
             // You may want to respawn the player at a default spawn point if no checkpoint is set
-            player.transform.position = Vector3.zero;
+            player.transform.position = startPos;
         }
     }
 }
