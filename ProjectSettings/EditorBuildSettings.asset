@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: d0c6991175bcf024f98c9b84f229cf91
   - enabled: 1
+    path: Assets/Scenes/tuukantesti2.unity
+    guid: 6c029e857a729b34e9dda4ad0db0c5e5
+  - enabled: 1
     path: Assets/Scenes/RiikkaSnowtest.unity
     guid: 308eb75925298904d961ccff47a84376
   m_configObjects: {}
