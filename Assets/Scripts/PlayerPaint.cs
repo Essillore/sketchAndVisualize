@@ -12,6 +12,7 @@ public class PlayerPaint : MonoBehaviour
     private Vector2 platformStartPosition;
     private GameObject currentPlatform;
 
+
     void Update()
     {
         HandleInput();

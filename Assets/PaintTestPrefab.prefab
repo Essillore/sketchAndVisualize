@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2546155258770459079}
   - component: {fileID: 4106996481485657654}
   - component: {fileID: 2114798819790764813}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PaintTestPrefab
   m_TagString: PaintedIce
   m_Icon: {fileID: 0}
