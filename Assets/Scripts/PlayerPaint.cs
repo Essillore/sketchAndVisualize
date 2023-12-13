@@ -12,6 +12,8 @@ public class PlayerPaint : MonoBehaviour
     private Vector2 platformStartPosition;
     private GameObject currentPlatform;
 
+    private bool isDrawModeActive = false;
+
 
     void Update()
     {
@@ -20,23 +22,50 @@ public class PlayerPaint : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            StartCreatingPlatform();
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            StopCreatingPlatform();
+            ToggleDrawMode();
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (isDrawModeActive)
         {
-            ErasePlatform();
-        }
+            // Handle input related to drawing platforms
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCreatingPlatform();
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                StopCreatingPlatform();
+            }
 
-        if (isCreatingPlatform)
+            if (Input.GetMouseButtonDown(1))
+            {
+                ErasePlatform();
+            }
+
+            if (isCreatingPlatform)
+            {
+                UpdatePlatformSize();
+            }
+        }
+    }
+
+    void ToggleDrawMode()
+    {
+        isDrawModeActive = !isDrawModeActive;
+
+        // Set the time scale to 0 when draw mode is active
+        Time.timeScale = isDrawModeActive ? 0 : 1;
+
+        // Additional logic when draw mode is toggled
+        if (isDrawModeActive)
         {
-            UpdatePlatformSize();
+            // For example, you can show UI or perform other actions
+        }
+        else
+        {
+            // Reset any state or perform actions when draw mode is turned off
         }
     }
 
