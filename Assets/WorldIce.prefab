@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 2546155258770459079}
   - component: {fileID: 4106996481485657654}
   - component: {fileID: 2114798819790764813}
-  - component: {fileID: -2697473326573833703}
   m_Layer: 6
-  m_Name: PaintTestPrefab
+  m_Name: WorldIce
   m_TagString: PaintedIce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,16 +130,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3406801, y: 0.3186398}
   m_EdgeRadius: 0
---- !u!114 &-2697473326573833703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7700474290455450416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795d0545acd3964d99b92b223947080, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meltDelay: 5
