@@ -54,9 +54,7 @@ public class PlayerControllerScript : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
 
-        Move();
-
-        
+        Move();  
     }
 
     public void Update()
@@ -67,7 +65,6 @@ public class PlayerControllerScript : MonoBehaviour
 
     public void Move()
     {
-       // Vector3 movement = new Vector3(horizontal, 0.0f, vertical).normalized * speed * Time.deltaTime;
 
         if (IsGrounded())
         {
@@ -76,8 +73,6 @@ public class PlayerControllerScript : MonoBehaviour
 
             if (horizontal == 0 && myRB.velocity.x != 0)
                 myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, 0f, deceleration * Time.deltaTime), myRB.velocity.y);
-          //  transform.Translate(movement);
-            
         }
  
         //swap facing direction
