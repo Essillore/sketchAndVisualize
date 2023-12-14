@@ -18,10 +18,7 @@ public class GreyScaleToggle : MonoBehaviour
 
     private void Awake()
     {
-        volume = GameObject.FindWithTag("MainCamera").GetComponent<Volume>();
     }
-
-
 
     void Update()
     {
@@ -44,6 +41,13 @@ public class GreyScaleToggle : MonoBehaviour
             PerformInterpolation();
         }
     }
+
+    public void FindCamera()
+    {
+        volume = GameObject.FindWithTag("MainCamera").GetComponent<Volume>();
+
+    }
+
 
     public void PrepareInterpolation(float saturation, float contrast)
     {
