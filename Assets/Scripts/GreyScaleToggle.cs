@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -15,9 +16,15 @@ public class GreyScaleToggle : MonoBehaviour
     private float startSaturation;
     private float startContrast;
 
-    void Update()
+    private void Awake()
     {
         volume = GameObject.FindWithTag("MainCamera").GetComponent<Volume>();
+    }
+
+
+
+    void Update()
+    {
         // Check if Y key is pressed for greyscale
         if (Input.GetKeyDown(KeyCode.Y))
         {
