@@ -57,6 +57,10 @@ public class PlayerController : MonoBehaviour
 
     public AudioManager audioManager;
 
+    [Header("Effects")]
+    public GameObject boomPrefab;
+    public GameObject smokePrefab;
+
 
     void Start()
     {
@@ -262,7 +266,9 @@ public void Flip()
     public void Death()
     {
         audioManager.Play("deathSound", audioManager.sounds);
+        Instantiate(boomPrefab, transform.position, Quaternion.identity);
         transform.position = gm.lastCheckPointPos;
+        Instantiate(smokePrefab, transform.position, Quaternion.identity);
 
     }
 
