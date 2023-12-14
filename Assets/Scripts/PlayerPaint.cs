@@ -16,6 +16,8 @@ public class PlayerPaint : MonoBehaviour
 
     public GreyScaleToggle greyScaleToggle;
 
+    //public ParticleSystem makeIce;
+
     private void Start()
     {
         greyScaleToggle = GameObject.Find("GreyScaleShift").GetComponent<GreyScaleToggle>();
@@ -26,6 +28,7 @@ public class PlayerPaint : MonoBehaviour
     void Update()
     {
         HandleInput();
+        //makeIce.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void HandleInput()
@@ -42,10 +45,13 @@ public class PlayerPaint : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 StartCreatingPlatform();
+                //makeIce.Play();
+                
             }
             else if (Input.GetMouseButtonUp(0))
             {
                 StopCreatingPlatform();
+                //makeIce.Stop();
             }
 
             if (Input.GetMouseButtonDown(1))
@@ -86,6 +92,7 @@ public class PlayerPaint : MonoBehaviour
         isCreatingPlatform = true;
         platformStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         currentPlatform = Instantiate(platformPrefab, new Vector3(platformStartPosition.x, platformStartPosition.y, initialPlatformHeight), Quaternion.identity);
+
     }
 
     void StopCreatingPlatform()
