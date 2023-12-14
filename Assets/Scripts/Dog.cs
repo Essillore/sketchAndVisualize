@@ -4,60 +4,91 @@ public class Dog : MonoBehaviour
 {
     public float gatherRange = 3f;
     public LayerMask resourceLayer;
-    public Transform resourceDetector; // Object used to detect resources in front of the dog
-    public float followDistance = 5f; // Distance within which the dog follows the player
-    public float detectionRange = 10f; // Range within which the dog detects resources
-    public Transform player; // Reference to the player
-    public bool isFollowingPlayer = true; // Flag to control following behavior
-    public float speedOfDog = 30f;
+    public Transform resourceDetector;
+    public float followDistance = 5f;
+    public float detectionRange = 10f;
+    public Transform player;
+    public bool isFollowingPlayer = true;
+    public float speedOfDog = 20f;
+
+    private bool isGatheringResource = false;
+    private Transform targetResource = null;
 
     private void Update()
     {
-        if (isFollowingPlayer)
+        if (isFollowingPlayer && !isGatheringResource)
         {
             FollowPlayer();
         }
 
-        if (Input.GetKeyDown(KeyCode.G))
+        if (isGatheringResource)
         {
-            GatherResources();
+            MoveToResource();
         }
     }
 
-    private void GatherResources()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        RaycastHit2D hit = Physics2D.Raycast(resourceDetector.position, transform.right, gatherRange, resourceLayer);
-
-        if (hit.collider != null)
+        if (other.gameObject.layer == LayerMask.NameToLayer("Resource")) // Replace "ResourceLayer" with the actual name of your resource layer
         {
-            Resource resource = hit.collider.GetComponent<Resource>();
-            if (resource != null)
+            targetResource = other.transform;
+            isFollowingPlayer = false;
+            isGatheringResource = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.transform == targetResource)
+        {
+            targetResource = null;
+            isGatheringResource = false;
+            isFollowingPlayer = true;
+        }
+    }
+
+    private void MoveToResource()
+    {
+        if (targetResource != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, targetResource.position, Time.deltaTime * speedOfDog);
+
+            if (Vector2.Distance(transform.position, targetResource.position) < 1f) // 1f is a small threshold distance
             {
-            //    Debug.Log("Dog gathered " + resource.amount + " " + resource.resourceName);
-                Destroy(resource.gameObject); // Destroy the collected resource
-                // Handle the collected resource as needed
+                GatherResource(targetResource);
             }
         }
     }
-private void FollowPlayer()
-{
-    float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-    if (distanceToPlayer > followDistance)
+
+    private void GatherResource(Transform resourceTransform)
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, Time.deltaTime * speedOfDog);
+        Resource resource = resourceTransform.GetComponent<Resource>();
+        if (resource != null)
+        {
+            // Debug.Log("Dog gathered " + resource.amount + " " + resource.resourceName);
+            Destroy(resource.gameObject);
+        }
+
+        isGatheringResource = false;
+        isFollowingPlayer = true;
     }
-}
 
+    private void FollowPlayer()
+    {
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (distanceToPlayer > followDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, Time.deltaTime * speedOfDog);
+        }
+    }
 
-// Method to command the dog to stop following the player
-public void StopFollowingPlayer()
-{
-    isFollowingPlayer = false;
-}
+    public void StopFollowingPlayer()
+    {
+        isFollowingPlayer = false;
+    }
 
-// Method to command the dog to resume following the player
-public void ResumeFollowingPlayer()
-{
-    isFollowingPlayer = true;
-}
+    public void ResumeFollowingPlayer()
+    {
+        isFollowingPlayer = true;
+    }
 }
