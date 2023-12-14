@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
      //   camControl = GameObject.Find("CameraController").GetComponent<CameraController>();
         transform.position = playerSpawn.position;
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent < GameManager>();
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
         myanim = GetComponentInChildren<Animator>();
     }
 
@@ -242,6 +242,8 @@ public void Flip()
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            //Destroy(collision.gameObject);
+
             Death();
         }
 

@@ -16,6 +16,8 @@ public class PlayerPaint : MonoBehaviour
 
     public GreyScaleToggle greyScaleToggle;
 
+    public Camera cam;
+
     //public ParticleSystem makeIce;
 
     private void Start()
@@ -24,6 +26,10 @@ public class PlayerPaint : MonoBehaviour
         Debug.Log("Found greyscalestoggle");
     }
 
+    private void Awake()
+    {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
 
     void Update()
     {
@@ -56,6 +62,7 @@ public class PlayerPaint : MonoBehaviour
 
             if (Input.GetMouseButtonDown(1))
             {
+                Debug.Log("Clicked on mousebutton 1");
                 ErasePlatform();
             }
 
@@ -127,6 +134,7 @@ public class PlayerPaint : MonoBehaviour
 
     void ErasePlatform()
     {
+        Debug.Log("Erasing platform");
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
         if (hit.collider != null && hit.collider.CompareTag("PaintedIce"))

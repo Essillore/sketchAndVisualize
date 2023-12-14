@@ -1836,6 +1836,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f677b6f74f2ed94eaec31a8f33d74ef, type: 3}
+--- !u!1 &975749974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 975749975}
+  - component: {fileID: 975749976}
+  m_Layer: 8
+  m_Name: FishSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &975749975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975749974}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.17564, y: -2.5313685, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &975749976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975749974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6272d013bed154694e3e081eb88811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPrefab: {fileID: 623924265712402924, guid: de57d6c23feb94c4484ed7392a77d2aa, type: 3}
+  spawnDistance: {x: 0, y: 0, z: 0}
 --- !u!1 &994674536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +2038,7 @@ MonoBehaviour:
   initialPlatformHeight: 2
   maxPlatformWidth: 6
   greyScaleToggle: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!1001 &1010918622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2710,6 +2757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 644481835}
+  greyToggle: {fileID: 0}
 --- !u!58 &1488605909
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3544,6 +3592,7 @@ SceneRoots:
   - {fileID: 791363941}
   - {fileID: 84636758}
   - {fileID: 1640594382}
+  - {fileID: 975749975}
   - {fileID: 166443694}
   - {fileID: 763839337}
   - {fileID: 734876521}
