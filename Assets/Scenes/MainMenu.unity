@@ -1296,6 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
+  greyToggle: {fileID: 0}
 --- !u!1 &814518066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1332,9 @@ MonoBehaviour:
   platformPrefab: {fileID: 7700474290455450416, guid: 965248ed1d015fd48b83a9a6af715059, type: 3}
   initialPlatformHeight: 2
   maxPlatformWidth: 6
+  audioManager: {fileID: 0}
   greyScaleToggle: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!70 &814518069
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2779,7 +2782,7 @@ MonoBehaviour:
     loop: 0
     isPlaying: 0
     source: {fileID: 0}
-  - name: 
+  - name: jumpSound
     clip: {fileID: 8300000, guid: cef7e3139885f5047999ac85ee256672, type: 3}
     volume: 0.551
     pitch: 1

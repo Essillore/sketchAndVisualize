@@ -11,6 +11,7 @@ public class PlayerPaint : MonoBehaviour
     private bool isCreatingPlatform;
     private Vector2 platformStartPosition;
     private GameObject currentPlatform;
+    public AudioManager audioManager;
 
     private bool isDrawModeActive = false;
 
@@ -47,6 +48,7 @@ public class PlayerPaint : MonoBehaviour
 
         if (isDrawModeActive)
         {
+            
             // Handle input related to drawing platforms
             if (Input.GetMouseButtonDown(0))
             {
@@ -84,6 +86,7 @@ public class PlayerPaint : MonoBehaviour
         if (isDrawModeActive)
         {
             greyScaleToggle.PrepareInterpolation(-100, 30);
+            audioManager.Play("paintmodeTransitionSound", audioManager.sounds);
             // For example, you can show UI or perform other actions
         }
         else
@@ -96,6 +99,7 @@ public class PlayerPaint : MonoBehaviour
 
     void StartCreatingPlatform()
     {
+        audioManager.Play("drawingSound", audioManager.sounds);
         isCreatingPlatform = true;
         platformStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         currentPlatform = Instantiate(platformPrefab, new Vector3(platformStartPosition.x, platformStartPosition.y, initialPlatformHeight), Quaternion.identity);
@@ -134,6 +138,7 @@ public class PlayerPaint : MonoBehaviour
 
     void ErasePlatform()
     {
+        audioManager.Play("eraseSound", audioManager.sounds);
         Debug.Log("Erasing platform");
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
