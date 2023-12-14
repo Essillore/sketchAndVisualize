@@ -17,9 +17,8 @@ public class HomingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.LookAt(target);
         transform.Translate(Vector2.left * enemySpeed * Time.deltaTime);
-        Destroy(gameObject, 7f);
+        Destroy(gameObject, 30f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +26,7 @@ public class HomingEnemy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //other.gameObject.GetComponent<PlayerController>().TakingHit();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
