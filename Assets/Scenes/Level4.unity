@@ -1683,6 +1683,7 @@ MonoBehaviour:
   initialPlatformHeight: 2
   maxPlatformWidth: 6
   greyScaleToggle: {fileID: 1875323388}
+  cam: {fileID: 0}
 --- !u!70 &985641954
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2722,8 +2723,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b2ffdcbfa092b6043ab16ecd7e409cdd, type: 2}
+  m_sharedMaterial: {fileID: -3748970662008384564, guid: b2ffdcbfa092b6043ab16ecd7e409cdd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
