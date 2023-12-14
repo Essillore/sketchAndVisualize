@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8721323299754231367}
+  - component: {fileID: 4160087515552860698}
   m_Layer: 8
   m_Name: boomHolder
   m_TagString: Untagged
@@ -32,6 +33,18 @@ Transform:
   - {fileID: 2734670783633063469}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4160087515552860698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6415526539940055592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041863e605c0712499d983c690089689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5519091335797141210
 PrefabInstance:
   m_ObjectHideFlags: 0
