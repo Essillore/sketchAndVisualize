@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class Dog : MonoBehaviour
 {
@@ -14,10 +15,28 @@ public class Dog : MonoBehaviour
     private bool isGatheringResource = false;
     private Transform targetResource = null;
 
-    public bool facingRight = true;
+
+    [Header("Animation")]
+    public GameObject playerSpriteObject;
+    public bool animationsON = true;
+    public bool facingLeft = true;
+    public bool isFlying = false;
+    public float horizontal;
+    public float vertical;
     private bool moving = false;
-    public SpriteRenderer dogSpriteObject;
+    private bool movingHor = false;
+    private bool movingVert = false;
+    public Rigidbody2D dogRB;
+    public GameObject dogSpriteObject;
+    public SpriteRenderer dogSprite;
     public Animator dogAnimator;
+    private Vector3 previousPosition;
+    private Vector3 currentVelocity;
+
+    private void Start()
+    {
+        dogRB = gameObject.GetComponent<Rigidbody2D>();
+    }
 
     private void Update()
     {
@@ -30,7 +49,71 @@ public class Dog : MonoBehaviour
         {
             MoveToResource();
         }
+
+        if (movingHor || movingVert)
+        {
+            moving = true;
+        }
+        else
+        {
+            moving = false;
+        }
+
+        //swap facing direction
+        if (horizontal < -0.1f && facingLeft)
+        {
+            Flip();
+        }
+        if (horizontal > 0.1f && !facingLeft)
+        {
+            Flip();
+        }
+
+        horizontal = currentVelocity.x;
+        movingHor = Mathf.Abs(horizontal) > 0.1f;
+        movingVert = Mathf.Abs(vertical) > 0.1f;
+
+        // Calculate time elapsed since last frame
+        float timeDelta = Time.deltaTime;
+
+        // Calculate current velocity
+        currentVelocity = (transform.position - previousPosition) / timeDelta;
+
+        // Update previous position for the next frame
+        previousPosition = transform.position;
+
+        // Optionally, you can print the velocity to the console
+        Debug.Log("Current Velocity: " + currentVelocity);
+
+        if (moving == true)
+        {
+            dogAnimator.SetBool("isFlying", true);
+        }
+        if (!moving)
+        {
+            dogAnimator.SetBool("isFlying", false);
+        }
     }
+
+    public void Flip()
+    {
+
+        Vector3 currentScale = dogSpriteObject.transform.localScale;
+
+        if (facingLeft)
+        {
+            currentScale.x = 1;
+            dogSpriteObject.transform.localScale = currentScale;
+            facingLeft = false;
+        }
+        else if (!facingLeft)
+        {
+            currentScale.x = -1;
+            dogSpriteObject.transform.localScale = currentScale;
+            facingLeft = true;
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -98,22 +181,5 @@ public class Dog : MonoBehaviour
         isFollowingPlayer = true;
     }
 
-    public void Flip()
-    {
 
-        Vector3 currentScale = dogSpriteObject.transform.localScale;
-
-        if (facingRight)
-        {
-            currentScale.x = -1;
-            dogSpriteObject.transform.localScale = currentScale;
-            facingRight = false;
-        }
-        else if (!facingRight)
-        {
-            currentScale.x = 1;
-            dogSpriteObject.transform.localScale = currentScale;
-            facingRight = true;
-        }
-    }
 }
