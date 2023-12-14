@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
         transform.position = playerSpawn.position;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
         myanim = GetComponentInChildren<Animator>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     private void FixedUpdate()

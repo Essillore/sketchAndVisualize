@@ -24,6 +24,7 @@ public class PlayerPaint : MonoBehaviour
     private void Start()
     {
         greyScaleToggle = GameObject.Find("GreyScaleShift").GetComponent<GreyScaleToggle>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         Debug.Log("Found greyscalestoggle");
     }
 
