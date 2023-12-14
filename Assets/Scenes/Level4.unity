@@ -1867,8 +1867,9 @@ MonoBehaviour:
   isRunningA: 0
   facingRight: 1
   audioManager: {fileID: 0}
-  boomPrefab: {fileID: 108178619623925589, guid: 498b58e4b7a71c943a425018f7bb7bf6, type: 3}
-  smokePrefab: {fileID: 5817112505409329110, guid: e24920ff3369a8044be0ba5e25bbc47c, type: 3}
+  boomPrefab: {fileID: 6415526539940055592, guid: cc620663c4c6451409fdfe8f621cd8df, type: 3}
+  smokePrefab: {fileID: 7819684347742334540, guid: a15ebbe909f835e4e875f60909d4535f, type: 3}
+  upExplosion: 5
 --- !u!1 &995911583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3320,6 +3321,7 @@ GameObject:
   - component: {fileID: 1937876533}
   - component: {fileID: 1937876532}
   - component: {fileID: 1937876531}
+  - component: {fileID: 1937876535}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -3410,6 +3412,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1937876535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937876530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d728d6256c9c1114091f6cdd4481fc27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
 --- !u!1001 &1975271473
 PrefabInstance:
   m_ObjectHideFlags: 0

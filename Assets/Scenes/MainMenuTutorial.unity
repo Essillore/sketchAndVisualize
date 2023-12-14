@@ -1438,8 +1438,8 @@ MonoBehaviour:
   isRunningA: 0
   facingRight: 1
   audioManager: {fileID: 1734138523}
-  boomPrefab: {fileID: 108178619623925589, guid: 498b58e4b7a71c943a425018f7bb7bf6, type: 3}
-  smokePrefab: {fileID: 5817112505409329110, guid: e24920ff3369a8044be0ba5e25bbc47c, type: 3}
+  boomPrefab: {fileID: 6415526539940055592, guid: cc620663c4c6451409fdfe8f621cd8df, type: 3}
+  smokePrefab: {fileID: 7819684347742334540, guid: a15ebbe909f835e4e875f60909d4535f, type: 3}
   upExplosion: 5
 --- !u!4 &814518072
 Transform:
