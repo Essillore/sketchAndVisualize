@@ -65,7 +65,8 @@ public class Dog : MonoBehaviour
         Resource resource = resourceTransform.GetComponent<Resource>();
         if (resource != null)
         {
-            // Debug.Log("Dog gathered " + resource.amount + " " + resource.resourceName);
+            resource.GetComponent<Resource>().Collected();
+             Debug.Log("Dog gathered ham");
             Destroy(resource.gameObject);
         }
 
