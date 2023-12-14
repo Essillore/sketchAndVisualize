@@ -192,13 +192,13 @@ public void Flip()
 
     public void Jump()
     {
-        audioManager.Play("jumpSound", audioManager.sounds);
         Debug.Log("Jumped");
 
 
         if (Input.GetButtonDown("Jump"))
         {
             jumpBufferTimer = jumpBuffer;
+            audioManager.Play("jumpSound", audioManager.sounds);
             //myanim.SetBool("isJumping", true);
 
         }
@@ -265,10 +265,10 @@ public void Flip()
 
     public void Death()
     {
-        audioManager.Play("deathSound", audioManager.sounds);
         Instantiate(boomPrefab, transform.position, Quaternion.identity);
         transform.position = gm.lastCheckPointPos;
         Instantiate(smokePrefab, transform.position, Quaternion.identity);
+        audioManager.Play("deathSound", audioManager.sounds);
 
     }
 

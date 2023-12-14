@@ -561,7 +561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1715733932122941821, guid: 76ab4696a0291794c8cc672a68de4e1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.8123837
+      value: -6.38
       objectReference: {fileID: 0}
     - target: {fileID: 1715733932122941821, guid: 76ab4696a0291794c8cc672a68de4e1b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -716,18 +716,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 931970699}
     m_Modifications:
-    - target: {fileID: 2777091237389115282, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2777091237389115282, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2777091237389115282, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1236325943
-      objectReference: {fileID: 0}
     - target: {fileID: 3164415154055781885, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -771,10 +759,6 @@ PrefabInstance:
     - target: {fileID: 4472197116373581361, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
       propertyPath: m_Name
       value: snowball
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472197116373581361, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1682,6 +1666,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 7700474290455450416, guid: 965248ed1d015fd48b83a9a6af715059, type: 3}
   initialPlatformHeight: 2
   maxPlatformWidth: 6
+  audioManager: {fileID: 0}
   greyScaleToggle: {fileID: 1875323388}
   cam: {fileID: 0}
 --- !u!70 &985641954
@@ -1786,6 +1771,9 @@ MonoBehaviour:
   Animator: 0
   isRunningA: 0
   facingRight: 1
+  audioManager: {fileID: 0}
+  boomPrefab: {fileID: 108178619623925589, guid: 498b58e4b7a71c943a425018f7bb7bf6, type: 3}
+  smokePrefab: {fileID: 5817112505409329110, guid: e24920ff3369a8044be0ba5e25bbc47c, type: 3}
 --- !u!1 &995911583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,7 +2604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2359577110495914510, guid: 9b228eeaa6d4d894a9a58c2eb0aea2e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.02
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2359577110495914510, guid: 9b228eeaa6d4d894a9a58c2eb0aea2e3, type: 3}
       propertyPath: m_LocalPosition.z

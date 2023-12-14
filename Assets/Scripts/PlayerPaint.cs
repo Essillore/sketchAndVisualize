@@ -99,10 +99,10 @@ public class PlayerPaint : MonoBehaviour
 
     void StartCreatingPlatform()
     {
-        audioManager.Play("drawingSound", audioManager.sounds);
         isCreatingPlatform = true;
         platformStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         currentPlatform = Instantiate(platformPrefab, new Vector3(platformStartPosition.x, platformStartPosition.y, initialPlatformHeight), Quaternion.identity);
+        audioManager.Play("drawingSound", audioManager.sounds);
 
     }
 
