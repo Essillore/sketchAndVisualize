@@ -23,13 +23,15 @@ public class boomscript : MonoBehaviour
 
             // Set the flag to true to ensure it won't play again
             hasPlayed = true;
+            Explosion();
 
 
         }
         // Function to be called by the animation event
-        void explosion()
+        void Explosion()
         {
-            Destroy(gameObject);
+            Debug.Log("destroy");           
+            Destroy(gameObject, 1f);
         }
     }
 }
