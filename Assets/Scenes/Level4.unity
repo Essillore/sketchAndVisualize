@@ -419,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
+  greyToggle: {fileID: 0}
 --- !u!58 &171080135
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -513,8 +514,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1236325943
+  m_SortingLayer: 2
   m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: e458edf42d960f845a6334e4eff390b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -599,6 +600,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76ab4696a0291794c8cc672a68de4e1b, type: 3}
+--- !u!1 &217422466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217422467}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &217422467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217422466}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.692486, y: 11.402271, z: -4.8791714}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &256953541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -684,6 +716,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 931970699}
     m_Modifications:
+    - target: {fileID: 2777091237389115282, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777091237389115282, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777091237389115282, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1236325943
+      objectReference: {fileID: 0}
     - target: {fileID: 3164415154055781885, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -727,6 +771,10 @@ PrefabInstance:
     - target: {fileID: 4472197116373581361, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
       propertyPath: m_Name
       value: snowball
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472197116373581361, guid: a9f5ca9c783a2074ab07ce00acd9a5de, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1093,12 +1141,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 656641818}
     m_Modifications:
     - target: {fileID: 260154258092782883, guid: 6bfef569adc454f42b78bf3c1ac9329a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 260154258092782883, guid: 6bfef569adc454f42b78bf3c1ac9329a, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 260154258092782883, guid: 6bfef569adc454f42b78bf3c1ac9329a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1236325943
       objectReference: {fileID: 0}
     - target: {fileID: 7882881345670222497, guid: 6bfef569adc454f42b78bf3c1ac9329a, type: 3}
       propertyPath: m_Name
       value: Snowman 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882881345670222497, guid: 6bfef569adc454f42b78bf3c1ac9329a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882881345670222497, guid: 6bfef569adc454f42b78bf3c1ac9329a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8722607700548963685, guid: 6bfef569adc454f42b78bf3c1ac9329a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1214,7 +1278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 656641818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snowman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1294,7 @@ Transform:
   m_GameObject: {fileID: 656641817}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.8, y: -1.1, z: -0.2880684}
+  m_LocalPosition: {x: 44.67, y: -1.1, z: -0.2880684}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1695,8 +1759,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 1377942492}
   speed: 15
-  acceleration: 8
-  deceleration: 5
+  acceleration: 20
+  deceleration: 10
   horizontal: 0
   vertical: 0
   jumpForce: 12
@@ -3173,7 +3237,7 @@ GameObject:
   - component: {fileID: 1937876532}
   - component: {fileID: 1937876531}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3566,3 +3630,4 @@ SceneRoots:
   - {fileID: 1377942493}
   - {fileID: 1937876534}
   - {fileID: 441152414}
+  - {fileID: 217422467}
