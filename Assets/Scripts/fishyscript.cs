@@ -24,7 +24,7 @@ public class HomingEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Deathzone"))
         {
             //other.gameObject.GetComponent<Player>().TakingHit();
             Destroy(gameObject);
