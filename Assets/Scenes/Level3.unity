@@ -591,6 +591,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 7700474290455450416, guid: 965248ed1d015fd48b83a9a6af715059, type: 3}
   initialPlatformHeight: 2
   maxPlatformWidth: 6
+  audioManager: {fileID: 0}
   greyScaleToggle: {fileID: 1005058510}
   cam: {fileID: 0}
 --- !u!70 &190895308
@@ -669,8 +670,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 1383799074}
   speed: 15
-  acceleration: 8
-  deceleration: 5
+  acceleration: 20
+  deceleration: 20
   horizontal: 0
   vertical: 0
   jumpForce: 12
