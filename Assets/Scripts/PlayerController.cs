@@ -113,6 +113,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void TakingHit()
+    {
+        Death();
+    }
+
     public void Move()
     {
 
