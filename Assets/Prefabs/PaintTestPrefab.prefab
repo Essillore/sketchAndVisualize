@@ -143,4 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d795d0545acd3964d99b92b223947080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meltDelay: 5
+  meltDelay: 15
+  opacityFadeDuration: 5

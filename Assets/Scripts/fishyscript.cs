@@ -26,7 +26,7 @@ public class HomingEnemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Deathzone"))
         {
-            //other.gameObject.GetComponent<Player>().TakingHit();
+            other.gameObject.GetComponent<PlayerController>().TakingHit();
             Destroy(gameObject);
         }
     }
