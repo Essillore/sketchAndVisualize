@@ -9,7 +9,7 @@ public class Resource : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        resourceCollector = GameObject.Find("ScoreObject").GetComponent<Score>();
+        resourceCollector = GameObject.Find("GM").GetComponent<Score>();
     }
 
     // Update is called once per frame
