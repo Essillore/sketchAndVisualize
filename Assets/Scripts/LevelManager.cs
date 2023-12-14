@@ -11,11 +11,6 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
 
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            SceneManager.LoadScene(3);
-        }
-
     }
 
     // Update is called once per frame

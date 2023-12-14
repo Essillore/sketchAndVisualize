@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionTime: 1
-  currentLevelNumber: 0
 --- !u!4 &36219085
 Transform:
   m_ObjectHideFlags: 0
@@ -1106,6 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db3c1144ce9414f88c1760140530c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
 --- !u!1 &889328079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,8 +1119,6 @@ GameObject:
   - component: {fileID: 889328084}
   - component: {fileID: 889328083}
   - component: {fileID: 889328082}
-  - component: {fileID: 889328081}
-  - component: {fileID: 889328080}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1128,33 +1126,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &889328080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889328079}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d25bfe82eea94346836aff117fdb721, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformTilePrefab: {fileID: 7700474290455450416, guid: 965248ed1d015fd48b83a9a6af715059, type: 3}
-  tileSpacing: 0.1
---- !u!114 &889328081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889328079}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5085136c41dc3a449e55db1bcd95f03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 7700474290455450416, guid: 965248ed1d015fd48b83a9a6af715059, type: 3}
 --- !u!114 &889328082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,7 +1216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc2bfd78d1e6b74bb13e19cdfbeb980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  gm: {fileID: 0}
+  speed: 30
   acceleration: 8
   deceleration: 1
   horizontal: 0
@@ -2531,6 +2503,7 @@ GameObject:
   - component: {fileID: 2109848232}
   - component: {fileID: 2109848235}
   - component: {fileID: 2109848236}
+  - component: {fileID: 2109848237}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2673,6 +2646,19 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: f45fc59d3323c894dab599047ea55d60, type: 2}
+--- !u!114 &2109848237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109848231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d728d6256c9c1114091f6cdd4481fc27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

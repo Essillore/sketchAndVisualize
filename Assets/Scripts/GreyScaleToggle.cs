@@ -17,6 +17,7 @@ public class GreyScaleToggle : MonoBehaviour
 
     void Update()
     {
+        volume = GameObject.FindWithTag("MainCamera").GetComponent<Volume>();
         // Check if Y key is pressed for greyscale
         if (Input.GetKeyDown(KeyCode.Y))
         {
