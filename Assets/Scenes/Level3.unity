@@ -1841,7 +1841,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3135816484977023096, guid: 0c8e5417b8b0a21458cb86adf1202cdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.34083
+      value: 48.47
       objectReference: {fileID: 0}
     - target: {fileID: 3135816484977023096, guid: 0c8e5417b8b0a21458cb86adf1202cdd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2385,6 +2385,7 @@ GameObject:
   - component: {fileID: 1211719062}
   - component: {fileID: 1211719061}
   - component: {fileID: 1211719060}
+  - component: {fileID: 1211719064}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -2475,6 +2476,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1211719064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211719059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d728d6256c9c1114091f6cdd4481fc27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
 --- !u!1001 &1228270923
 PrefabInstance:
   m_ObjectHideFlags: 0
