@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - PaintedIce
+  - Deathzone
+  - Checkpoint
+  - GM
   layers:
   - Default
   - TransparentFX

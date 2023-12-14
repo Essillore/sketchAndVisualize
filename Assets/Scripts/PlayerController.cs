@@ -5,8 +5,10 @@ using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI.Table;
 
-public class PlayerControllerScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public GameManager gm;
+
     [Header("Stats")]
     //public CameraController camControl;
     public float speed = 6f;
@@ -47,6 +49,7 @@ public class PlayerControllerScript : MonoBehaviour
     {
      //   camControl = GameObject.Find("CameraController").GetComponent<CameraController>();
         transform.position = playerSpawn.position;
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent < GameManager>();
     }
 
     private void FixedUpdate()
@@ -173,7 +176,7 @@ public void Flip()
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("CheckPoint"))
+        if (collision.gameObject.CompareTag("Checkpoint"))
         {
             playerSpawn.position = collision.transform.position;
         }
@@ -193,6 +196,8 @@ public void Flip()
 
     public void Death()
     {
+        transform.position = gm.lastCheckPointPos;
+
     }
 
 

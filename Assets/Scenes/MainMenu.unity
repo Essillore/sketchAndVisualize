@@ -1170,6 +1170,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 7700474290455450416, guid: 965248ed1d015fd48b83a9a6af715059, type: 3}
   initialPlatformHeight: 2
   maxPlatformWidth: 6
+  greyScaleToggle: {fileID: 0}
 --- !u!70 &889328083
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2123,6 +2124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1625374594}
   - component: {fileID: 1625374595}
+  - component: {fileID: 1625374596}
   m_Layer: 0
   m_Name: GreyScaleShift
   m_TagString: Untagged
@@ -2158,6 +2160,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 2109848236}
+--- !u!114 &1625374596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625374592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d728d6256c9c1114091f6cdd4481fc27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
 --- !u!1 &1734138521
 GameObject:
   m_ObjectHideFlags: 0

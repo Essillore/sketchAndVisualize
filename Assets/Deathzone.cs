@@ -5,6 +5,7 @@ using UnityEngine;
 public class Deathzone : MonoBehaviour
 {
     private GameManager gm;
+    public PlayerController playerController;
 
     void Start()
     {
@@ -14,7 +15,8 @@ public class Deathzone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gm.lastCheckPointPos = transform.position;
+            playerController = other.GetComponent<PlayerController>();
+            playerController.Death();
         }
     }
 }
