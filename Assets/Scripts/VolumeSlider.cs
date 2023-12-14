@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class VolumeSlider : MonoBehaviour
@@ -10,6 +11,8 @@ public class VolumeSlider : MonoBehaviour
 
     public bool sounds;
     public bool musics;
+    public float volume;
+    
 
     public void Start()
     {

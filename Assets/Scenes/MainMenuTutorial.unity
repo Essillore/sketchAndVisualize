@@ -3232,6 +3232,7 @@ MonoBehaviour:
   audioManager: {fileID: 1734138523}
   sounds: 0
   musics: 1
+  volume: 0
 --- !u!114 &2089357128
 MonoBehaviour:
   m_ObjectHideFlags: 0
