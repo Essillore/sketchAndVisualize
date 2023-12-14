@@ -20,7 +20,10 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
-
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            QuitGame();
+        }
     }
     public int CurrentLevel()
     {
