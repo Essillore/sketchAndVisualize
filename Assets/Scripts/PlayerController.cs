@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
     private bool movingHor = false;
     private bool movingVert = false;
 
+    public AudioManager audioManager;
+
 
     void Start()
     {
@@ -186,6 +188,7 @@ public void Flip()
 
     public void Jump()
     {
+        audioManager.Play("jumpSound", audioManager.sounds);
         Debug.Log("Jumped");
 
 
@@ -258,6 +261,7 @@ public void Flip()
 
     public void Death()
     {
+        audioManager.Play("deathSound", audioManager.sounds);
         transform.position = gm.lastCheckPointPos;
 
     }
