@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public float transitionTime = 1f;
+    public int currentLevelNumber;
 
     void Start()
     {
@@ -26,6 +27,11 @@ public class LevelManager : MonoBehaviour
         }
 
     }
+    public void CurrentLevel()
+    {
+        currentLevelNumber = SceneManager.GetActiveScene().buildIndex;
+    }
+
     
     public void ChangeLevel(int levelNumber)
     {
