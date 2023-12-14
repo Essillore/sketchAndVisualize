@@ -2409,8 +2409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 994616319}
   speed: 15
-  acceleration: 8
-  deceleration: 5
+  acceleration: 20
+  deceleration: 20
   horizontal: 0
   vertical: 0
   jumpForce: 12
