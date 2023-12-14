@@ -14,6 +14,14 @@ public class PlayerPaint : MonoBehaviour
 
     private bool isDrawModeActive = false;
 
+    public GreyScaleToggle greyScaleToggle;
+
+    private void Start()
+    {
+        greyScaleToggle = GameObject.Find("GreyScaleShift").GetComponent<GreyScaleToggle>();
+        Debug.Log("Found greyscalestoggle");
+    }
+
 
     void Update()
     {
@@ -24,6 +32,7 @@ public class PlayerPaint : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+
             ToggleDrawMode();
         }
 
@@ -61,10 +70,13 @@ public class PlayerPaint : MonoBehaviour
         // Additional logic when draw mode is toggled
         if (isDrawModeActive)
         {
+            greyScaleToggle.PrepareInterpolation(-100, 30);
             // For example, you can show UI or perform other actions
         }
         else
         {
+            greyScaleToggle.PrepareInterpolation(0, 0);
+            //greyScaleToggle.PerformInterpolation();
             // Reset any state or perform actions when draw mode is turned off
         }
     }

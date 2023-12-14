@@ -37,7 +37,7 @@ public class GreyScaleToggle : MonoBehaviour
         }
     }
 
-    void PrepareInterpolation(float saturation, float contrast)
+    public void PrepareInterpolation(float saturation, float contrast)
     {
         if (volume == null || !volume.profile.TryGet<ColorAdjustments>(out ColorAdjustments colorAdjustments))
         {
@@ -54,7 +54,7 @@ public class GreyScaleToggle : MonoBehaviour
         isInterpolating = true; // Start interpolating
     }
 
-    void PerformInterpolation()
+    public void PerformInterpolation()
     {
         if (volume == null || !volume.profile.TryGet<ColorAdjustments>(out ColorAdjustments colorAdjustments))
         {
