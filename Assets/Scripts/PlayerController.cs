@@ -263,12 +263,20 @@ public void Flip()
 
 
 
+
     public void Death()
     {
+        audioManager.Play("deathSound", audioManager.sounds);
         Instantiate(boomPrefab, transform.position, Quaternion.identity);
+        // Calculate the position for the explosion
+        Vector3 explosionPosition = transform.position + new Vector3(0, upExplosion, 0);
+
+        // Instantiate the explosion prefab at the calculated position
+        Instantiate(boomPrefab, explosionPosition, Quaternion.identity);
+
         transform.position = gm.lastCheckPointPos;
         Instantiate(smokePrefab, transform.position, Quaternion.identity);
-        audioManager.Play("deathSound", audioManager.sounds);
+        Instantiate(smokePrefab, transform.position + Vector3.up.normalized, Quaternion.identity);
 
     }
 
