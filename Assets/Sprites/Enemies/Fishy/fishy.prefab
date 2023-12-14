@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2028450256066035469}
   - component: {fileID: 9157336601779782746}
   - component: {fileID: 3483148312121066895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fishy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.22746658, y: 0.2729602}

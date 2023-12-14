@@ -19,14 +19,14 @@ public class HomingEnemy : MonoBehaviour
     {
         //transform.LookAt(target);
         transform.Translate(Vector2.left * enemySpeed * Time.deltaTime);
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 7f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Deathzone"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerController>().TakingHit();
+            //other.gameObject.GetComponent<PlayerController>().TakingHit();
             Destroy(gameObject);
         }
     }
