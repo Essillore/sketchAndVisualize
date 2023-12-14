@@ -8,6 +8,7 @@ using static UnityEngine.Rendering.DebugUI.Table;
 public class PlayerController : MonoBehaviour
 {
     public GameManager gm;
+   
 
     [Header("Stats")]
     //public CameraController camControl;
@@ -45,17 +46,29 @@ public class PlayerController : MonoBehaviour
     public float jumpBufferTimer;
     public float airControlFactor = 0.5f;
 
+    //
+
+    [Header("Animations")]
+    public Animator myanim;
+    public bool Animator;
+
     void Start()
     {
      //   camControl = GameObject.Find("CameraController").GetComponent<CameraController>();
         transform.position = playerSpawn.position;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent < GameManager>();
+        myanim = GetComponentInChildren<Animator>();
     }
 
     private void FixedUpdate()
     {
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
+        if (myRB.velocity.y >= 0.1f) 
+        {
+            myanim.SetBool("isJumping", true);
+        }
+       
 
         Move();  
     }
@@ -73,9 +86,12 @@ public class PlayerController : MonoBehaviour
         {
             if (horizontal != 0)
                 myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, horizontal * speed, acceleration * Time.deltaTime), myRB.velocity.y);
+            myanim.SetBool("isWalking" , true); 
+           
 
             if (horizontal == 0 && myRB.velocity.x != 0)
                 myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, 0f, deceleration * Time.deltaTime), myRB.velocity.y);
+            myanim.SetBool("isWalking", false);
         }
  
         //swap facing direction
@@ -93,6 +109,7 @@ public class PlayerController : MonoBehaviour
     //        camControl.DeadZoneOff();
             coyoteTimeTimer = coyoteTime;
             jumpBuffer = 0.3f;
+            myanim.SetBool("isJumping", false);
         }
 
         else
@@ -136,10 +153,13 @@ public void Flip()
         if (Input.GetButtonDown("Jump"))
         {
             jumpBufferTimer = jumpBuffer;
+            //myanim.SetBool("isJumping", true);
+
         }
         else
         {
             jumpBufferTimer -= Time.deltaTime;
+           
         }
 
         if (jumpBufferTimer > 0f && coyoteTimeTimer > 0f)
@@ -153,6 +173,7 @@ public void Flip()
         {
             myRB.velocity = new Vector2(myRB.velocity.x, myRB.velocity.y * 0.6f);
             coyoteTimeTimer = 0f;
+
         }
 
         jumpBufferTimer = Mathf.Clamp(jumpBufferTimer, 0f, jumpBuffer);
