@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
     [Header("Effects")]
     public GameObject boomPrefab;
     public GameObject smokePrefab;
+    public float upExplosion = 5f; // Height above the object where the explosion will occur
+
 
 
     void Start()
