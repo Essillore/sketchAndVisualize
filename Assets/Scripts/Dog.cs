@@ -14,6 +14,11 @@ public class Dog : MonoBehaviour
     private bool isGatheringResource = false;
     private Transform targetResource = null;
 
+    public bool facingRight = true;
+    private bool moving = false;
+    public SpriteRenderer dogSpriteObject;
+    public Animator dogAnimator;
+
     private void Update()
     {
         if (isFollowingPlayer && !isGatheringResource)
@@ -91,5 +96,24 @@ public class Dog : MonoBehaviour
     public void ResumeFollowingPlayer()
     {
         isFollowingPlayer = true;
+    }
+
+    public void Flip()
+    {
+
+        Vector3 currentScale = dogSpriteObject.transform.localScale;
+
+        if (facingRight)
+        {
+            currentScale.x = -1;
+            dogSpriteObject.transform.localScale = currentScale;
+            facingRight = false;
+        }
+        else if (!facingRight)
+        {
+            currentScale.x = 1;
+            dogSpriteObject.transform.localScale = currentScale;
+            facingRight = true;
+        }
     }
 }

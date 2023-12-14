@@ -472,6 +472,9 @@ MonoBehaviour:
   player: {fileID: 6666829025312675999}
   isFollowingPlayer: 1
   speedOfDog: 20
+  facingRight: 1
+  dogSpriteObject: {fileID: 1142454532}
+  dogAnimator: {fileID: 1142454531}
 --- !u!4 &334121131
 Transform:
   m_ObjectHideFlags: 0
