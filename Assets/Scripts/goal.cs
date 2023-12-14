@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class goal : MonoBehaviour
 {
-
+    public LevelManager levelManager;
+    private int currentLevel;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(1);
-
+            currentLevel = levelManager.CurrentLevel();
+            levelManager.ChangeLevel(currentLevel + 1);
         }
     }
 }
