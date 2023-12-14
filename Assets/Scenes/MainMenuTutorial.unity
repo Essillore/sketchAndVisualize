@@ -1410,12 +1410,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1821515576}
-  speed: 6
-  acceleration: 8
-  deceleration: 1
+  speed: 15
+  acceleration: 20
+  deceleration: 20
   horizontal: 0
   vertical: 0
-  jumpForce: 10
+  jumpForce: 12
   maxYVelocity: 0
   myRB: {fileID: 814518070}
   playerSpriteObject: {fileID: 1464521943}
