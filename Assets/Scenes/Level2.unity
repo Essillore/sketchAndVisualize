@@ -207,6 +207,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &93151934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93151936}
+  - component: {fileID: 93151935}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &93151935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93151934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e048e627e746544aaaf3ed9a6a761d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: deathSound
+    clip: {fileID: 8300000, guid: 39f119619c3628945ae5f05a400bdee1, type: 3}
+    volume: 0.531
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: drawingSound
+    clip: {fileID: 8300000, guid: e1097a532477bce4887f830262e94a4a, type: 3}
+    volume: 0.601
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: eraseSound
+    clip: {fileID: 8300000, guid: 3d826b4956526054a9f8240a01aff21b, type: 3}
+    volume: 0.526
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: hamCollectedSound
+    clip: {fileID: 8300000, guid: 7802258ebdbcb2f49bd0558620fbfefe, type: 3}
+    volume: 0.508
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: jumpSound
+    clip: {fileID: 8300000, guid: cef7e3139885f5047999ac85ee256672, type: 3}
+    volume: 0.551
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: paintmodeTransitionSound
+    clip: {fileID: 8300000, guid: 5580a7a91cec12c48a2d26879f1616f9, type: 3}
+    volume: 0.583
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  musics:
+  - name: Music1
+    clip: {fileID: 8300000, guid: 00edbb7666c3f1d4084fb236c5749e1a, type: 3}
+    volume: 0
+    pitch: 1
+    loop: 1
+    isPlaying: 0
+    source: {fileID: 0}
+--- !u!4 &93151936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93151934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 85.9839, y: 13.57551, z: -0.827997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &118560784
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,5 +3725,6 @@ SceneRoots:
   - {fileID: 458843159}
   - {fileID: 644481836}
   - {fileID: 118560786}
+  - {fileID: 93151936}
   - {fileID: 1289187521}
   - {fileID: 500496031}
