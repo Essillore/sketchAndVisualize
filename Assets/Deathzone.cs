@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Checkpoint : MonoBehaviour
+public class Deathzone : MonoBehaviour
 {
     private GameManager gm;
 
@@ -13,7 +12,7 @@ public class Checkpoint : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
         {
             gm.lastCheckPointPos = transform.position;
         }
