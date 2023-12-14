@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 20f;
     public float maxYVelocity;
     public Rigidbody2D myRB;
-    public bool facingRight = true;
-    private bool moving = false;
 
 
     public GameObject playerSpriteObject;
@@ -51,6 +49,12 @@ public class PlayerController : MonoBehaviour
     [Header("Animations")]
     public Animator myanim;
     public bool Animator;
+    public bool isRunningA;
+    public bool facingRight = true;
+    private bool moving = false;
+    private bool movingHor = false;
+    private bool movingVert = false;
+
 
     void Start()
     {
@@ -64,11 +68,41 @@ public class PlayerController : MonoBehaviour
     {
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
+
+
+
         if (myRB.velocity.y >= 0.1f) 
         {
             myanim.SetBool("isJumping", true);
         }
-       
+        if (movingHor || movingVert)
+        {
+            moving = true;
+        }
+        else
+        {
+            moving = false;
+        }
+
+        //Footstep
+
+        if (movingHor && IsGrounded())
+        {       
+
+            if (!isRunningA)
+            {
+                isRunningA = true;
+
+                myanim.SetBool("isWalking", true);
+            }
+        }
+
+        if (!movingHor)
+        {
+            isRunningA = false;
+            myanim.SetBool("isWalking", false);
+        }
+
 
         Move();  
     }
@@ -86,12 +120,12 @@ public class PlayerController : MonoBehaviour
         {
             if (horizontal != 0)
                 myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, horizontal * speed, acceleration * Time.deltaTime), myRB.velocity.y);
-            myanim.SetBool("isWalking" , true); 
-           
 
             if (horizontal == 0 && myRB.velocity.x != 0)
                 myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, 0f, deceleration * Time.deltaTime), myRB.velocity.y);
-            myanim.SetBool("isWalking", false);
+
+            movingHor = Mathf.Abs(horizontal) > 0.1f;
+            movingVert = Mathf.Abs(vertical) > 0.1f;
         }
  
         //swap facing direction
