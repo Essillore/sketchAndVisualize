@@ -2287,6 +2287,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfdad485f6f0524499a119598dcd6f15, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1257981966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,6 +2479,69 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+=======
+--- !u!1001 &1345424449
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6586566406323351310, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_Name
+      value: Dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884098812069980467, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085277056148612939, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 994674538}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b792d107aa9d9941b8a2e8a967ffc21, type: 3}
+>>>>>>> Stashed changes
 --- !u!1001 &1424027176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3526,8 +3590,12 @@ SceneRoots:
   - {fileID: 846342395}
   - {fileID: 790741417}
   - {fileID: 1691216676}
+<<<<<<< Updated upstream
   - {fileID: 458843159}
   - {fileID: 644481836}
   - {fileID: 118560786}
   - {fileID: 1289187521}
   - {fileID: 500496031}
+=======
+  - {fileID: 1345424449}
+>>>>>>> Stashed changes
