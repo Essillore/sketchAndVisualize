@@ -270,15 +270,16 @@ public void Flip()
     public void Death()
     {
         audioManager.Play("deathSound", audioManager.sounds);
-        Instantiate(boomPrefab, transform.position, Quaternion.identity);
         // Calculate the position for the explosion
         Vector3 explosionPosition = transform.position + new Vector3(0, upExplosion, 0);
-
+        bool oneExplosion = true;
+        while (oneExplosion == true)
+        {
         // Instantiate the explosion prefab at the calculated position
         Instantiate(boomPrefab, explosionPosition, Quaternion.identity);
-
+            oneExplosion = false;
+        }
         transform.position = gm.lastCheckPointPos;
-        Instantiate(smokePrefab, transform.position, Quaternion.identity);
         Instantiate(smokePrefab, transform.position + Vector3.up.normalized, Quaternion.identity);
 
     }
