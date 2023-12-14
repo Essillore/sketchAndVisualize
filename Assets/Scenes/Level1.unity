@@ -529,9 +529,9 @@ GameObject:
   - component: {fileID: 396286227}
   - component: {fileID: 396286226}
   - component: {fileID: 396286225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 00000001 (4)
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -595,8 +595,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1236325943
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ba91d96310086174e8f728a187c02594, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1005,9 +1005,9 @@ GameObject:
   - component: {fileID: 939036310}
   - component: {fileID: 939036309}
   - component: {fileID: 939036308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 00000001 (2)
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,8 +1071,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1236325943
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ba91d96310086174e8f728a187c02594, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1297,7 +1297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000335265}
   - component: {fileID: 1000335264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rcok2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1342,8 +1342,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1236325943
+  m_SortingLayer: 2
   m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 4c3de8b4f70c56a41bfdd7669e615373, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1542,9 +1542,9 @@ GameObject:
   - component: {fileID: 1078012356}
   - component: {fileID: 1078012355}
   - component: {fileID: 1078012354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 00000001 (3)
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1608,8 +1608,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1236325943
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ba91d96310086174e8f728a187c02594, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2368,9 +2368,9 @@ GameObject:
   - component: {fileID: 1408860146}
   - component: {fileID: 1408860145}
   - component: {fileID: 1408860144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 00000001 (1)
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2434,8 +2434,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1236325943
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ba91d96310086174e8f728a187c02594, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2917,7 +2917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822002149}
   - component: {fileID: 1822002148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2962,8 +2962,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1236325943
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: fdb204bbee125e34dae5a80bf8c54c3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3690,9 +3690,9 @@ GameObject:
   - component: {fileID: 2126427791}
   - component: {fileID: 2126427790}
   - component: {fileID: 2126427789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 00000001
-  m_TagString: Untagged
+  m_TagString: Deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3756,8 +3756,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1236325943
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ba91d96310086174e8f728a187c02594, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
