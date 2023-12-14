@@ -624,7 +624,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4064
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: f45fc59d3323c894dab599047ea55d60, type: 2}
+  sharedProfile: {fileID: 11400000, guid: a34d51a7dd2b8a246b3e1a72a917f8df, type: 2}
 --- !u!1 &933493272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,7 +1753,7 @@ GameObject:
   - component: {fileID: 1280549794}
   - component: {fileID: 1280549793}
   - component: {fileID: 1280549792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2870,9 +2870,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1972238879}
     m_Modifications:
+    - target: {fileID: 286214699381192876, guid: aeb2ec33c7f323849bb38fcd18b23276, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 286214699381192876, guid: aeb2ec33c7f323849bb38fcd18b23276, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 286214699381192876, guid: aeb2ec33c7f323849bb38fcd18b23276, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1236325943
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973294144386816271, guid: aeb2ec33c7f323849bb38fcd18b23276, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2237239715477527169, guid: aeb2ec33c7f323849bb38fcd18b23276, type: 3}
       propertyPath: m_Name
       value: Snowman
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237239715477527169, guid: aeb2ec33c7f323849bb38fcd18b23276, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6723775413572211751, guid: aeb2ec33c7f323849bb38fcd18b23276, type: 3}
       propertyPath: m_SortingLayer
@@ -2940,7 +2960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972238879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snowman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
