@@ -22,7 +22,7 @@ public class PlayerPaint : MonoBehaviour
 
     public Camera cam;
 
-    //public ParticleSystem makeIce;
+    public GameObject makeIceHolder;
 
     private void Start()
     {
@@ -42,12 +42,35 @@ public class PlayerPaint : MonoBehaviour
 
   
 
+        private GameObject activeParticleSystem = null;
 
     void Update()
     {
         HandleInput();
-        //makeIce.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // Check for mouse button press
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePos = GetMousePositionInWorld();
+            activeParticleSystem = Instantiate(makeIceHolder, mousePos, Quaternion.identity);
+        }
+
+        // Reset when the mouse button is released
+        if (Input.GetMouseButtonUp(0))
+        {
+            activeParticleSystem = null;
+        }
     }
+
+    // Helper method to get the mouse position in world space
+    Vector3 GetMousePositionInWorld()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0; // Assuming you are in 2D space
+        return mousePos;
+    }
+
+
 
     void HandleInput()
     {

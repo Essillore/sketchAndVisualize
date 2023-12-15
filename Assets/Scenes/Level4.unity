@@ -1253,9 +1253,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1805935356}
     - target: {fileID: 6902562727003573195, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
+      propertyPath: makeIce
+      value: 
+      objectReference: {fileID: 67119137535221267, guid: f9461cbbf0f8cfd4894a1b68ba152d6b, type: 3}
+    - target: {fileID: 6902562727003573195, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 357121085}
+    - target: {fileID: 6902562727003573195, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
+      propertyPath: makeIceHolder
+      value: 
+      objectReference: {fileID: 4169603770331416625, guid: f9461cbbf0f8cfd4894a1b68ba152d6b, type: 3}
     - target: {fileID: 6902562727003573195, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
       propertyPath: greyScaleToggle
       value: 

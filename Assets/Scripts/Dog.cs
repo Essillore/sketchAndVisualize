@@ -81,9 +81,6 @@ public class Dog : MonoBehaviour
         // Update previous position for the next frame
         previousPosition = transform.position;
 
-        // Optionally, you can print the velocity to the console
-        Debug.Log("Current Velocity: " + currentVelocity);
-
         if (moving == true)
         {
             dogAnimator.SetBool("isFlying", true);

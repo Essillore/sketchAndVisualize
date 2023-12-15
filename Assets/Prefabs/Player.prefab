@@ -352,6 +352,7 @@ MonoBehaviour:
   audioManager: {fileID: 0}
   greyScaleToggle: {fileID: 0}
   cam: {fileID: 0}
+  makeIceHolder: {fileID: 4169603770331416625, guid: f9461cbbf0f8cfd4894a1b68ba152d6b, type: 3}
 --- !u!1 &6280228659223160718
 GameObject:
   m_ObjectHideFlags: 0
