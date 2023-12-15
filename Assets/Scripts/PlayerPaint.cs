@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerPaint : MonoBehaviour
 {
     public GameObject platformPrefab; // Drag your platform prefab here
+    public GameObject magicianPainty;
+    public GameObject movingPainty;
+
     public float initialPlatformHeight = 2.0f;
     public float maxPlatformWidth = 5.0f;
 
@@ -26,12 +29,19 @@ public class PlayerPaint : MonoBehaviour
         greyScaleToggle = GameObject.Find("GreyScaleShift").GetComponent<GreyScaleToggle>();
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         Debug.Log("Found greyscalestoggle");
+
+        // Initial setup: Hide one object and show the other
+        if (magicianPainty != null) magicianPainty.SetActive(false);
+        if (movingPainty != null) movingPainty.SetActive(true);
     }
 
     private void Awake()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
+
+  
+
 
     void Update()
     {
@@ -43,7 +53,8 @@ public class PlayerPaint : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-
+            magicianPainty.SetActive(Time.timeScale == 0);
+            movingPainty.SetActive(Time.timeScale != 0);
             ToggleDrawMode();
         }
 
@@ -86,15 +97,19 @@ public class PlayerPaint : MonoBehaviour
         // Additional logic when draw mode is toggled
         if (isDrawModeActive)
         {
+            // For example, you can show UI or perform other actions
             greyScaleToggle.PrepareInterpolation(-100, 30);
             audioManager.Play("paintmodeTransitionSound", audioManager.sounds);
-            // For example, you can show UI or perform other actions
+            if (magicianPainty != null) magicianPainty.SetActive(Time.timeScale == 0);
+            if (movingPainty != null) movingPainty.SetActive(Time.timeScale != 0);
         }
         else
         {
-            greyScaleToggle.PrepareInterpolation(0, 0);
-            //greyScaleToggle.PerformInterpolation();
             // Reset any state or perform actions when draw mode is turned off
+            greyScaleToggle.PrepareInterpolation(0, 0);
+            if (magicianPainty != null) magicianPainty.SetActive(Time.timeScale == 0);
+            if (movingPainty != null) movingPainty.SetActive(Time.timeScale != 0);
+
         }
     }
 
