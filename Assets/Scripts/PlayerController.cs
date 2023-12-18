@@ -140,7 +140,18 @@ public class PlayerController : MonoBehaviour
             movingHor = Mathf.Abs(horizontal) > 0.1f;
             movingVert = Mathf.Abs(vertical) > 0.1f;
         }
- 
+
+        else
+        {
+            // Airborne movement
+
+            // Apply horizontal movement during jump
+            myRB.velocity = new Vector2(Mathf.MoveTowards(myRB.velocity.x, horizontal * speed * airControlFactor, acceleration * Time.deltaTime), myRB.velocity.y);
+
+            movingHor = Mathf.Abs(horizontal) > 0.1f;
+            movingVert = Mathf.Abs(vertical) > 0.1f;
+        }
+
         //swap facing direction
         if (horizontal < -0.1f && facingRight)
         {

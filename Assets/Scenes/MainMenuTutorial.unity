@@ -2023,6 +2023,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1868449336857115001, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2871222256143151070, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.77
@@ -2072,13 +2076,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1821515576}
     - target: {fileID: 5411163026963236122, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
+      propertyPath: speed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411163026963236122, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
+      propertyPath: jumpBuffer
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411163026963236122, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 1407820697}
     - target: {fileID: 5411163026963236122, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
+      propertyPath: acceleration
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411163026963236122, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1734138523}
+    - target: {fileID: 5411163026963236122, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
+      propertyPath: deceleration
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411163026963236122, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
+      propertyPath: airControlFactor
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6902562727003573195, guid: c1ce5d73c514bcf49bac521222834235, type: 3}
       propertyPath: audioManager
       value: 
