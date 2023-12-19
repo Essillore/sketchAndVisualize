@@ -239,42 +239,42 @@ MonoBehaviour:
   sounds:
   - name: deathSound
     clip: {fileID: 8300000, guid: 39f119619c3628945ae5f05a400bdee1, type: 3}
-    volume: 0.531
+    volume: 1
     pitch: 1
     loop: 0
     isPlaying: 0
     source: {fileID: 0}
   - name: drawingSound
     clip: {fileID: 8300000, guid: e1097a532477bce4887f830262e94a4a, type: 3}
-    volume: 0.601
+    volume: 0.5
     pitch: 1
     loop: 0
     isPlaying: 0
     source: {fileID: 0}
   - name: eraseSound
     clip: {fileID: 8300000, guid: 3d826b4956526054a9f8240a01aff21b, type: 3}
-    volume: 0.526
+    volume: 1
     pitch: 1
     loop: 0
     isPlaying: 0
     source: {fileID: 0}
   - name: hamCollectedSound
     clip: {fileID: 8300000, guid: 7802258ebdbcb2f49bd0558620fbfefe, type: 3}
-    volume: 0.508
+    volume: 0.4
     pitch: 1
     loop: 0
     isPlaying: 0
     source: {fileID: 0}
   - name: jumpSound
     clip: {fileID: 8300000, guid: cef7e3139885f5047999ac85ee256672, type: 3}
-    volume: 0.551
+    volume: 1
     pitch: 1
     loop: 0
     isPlaying: 0
     source: {fileID: 0}
   - name: paintmodeTransitionSound
     clip: {fileID: 8300000, guid: 5580a7a91cec12c48a2d26879f1616f9, type: 3}
-    volume: 0.583
+    volume: 1
     pitch: 1
     loop: 0
     isPlaying: 0
